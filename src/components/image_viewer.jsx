@@ -5,6 +5,10 @@ function getViewEndPoint(url,name) {
     return url + "/view?name=" + name;
 }
 function ImageViewer({url,name,list,onContinue,onDelete,onExit}){
+  console.log("ImageViewer, url=" + url);
+  console.log("ImageViewer, name=" + name);
+  console.log("ImageViewer, list=" + list);
+
   const [currentImage, setCurrentImage] = useState(name);
   const [remoteUrl,setRemoteUrl] = useState(getViewEndPoint(url,name));
   const [imageList,setImageList] = useState(list);
