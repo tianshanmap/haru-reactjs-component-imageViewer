@@ -4,7 +4,7 @@ import styles from "./image_viewer.module.css"
 function getViewEndPoint(url,name) {
     return url + "/view?name=" + name;
 }
-function ImageViewer({url,name,list,onContinue,onDelete,onExit}){
+function ImageViewer({url,name,parent,list,onContinue,onDelete,onExit}){
   console.log("ImageViewer, url=" + url);
   console.log("ImageViewer, name=" + name);
   console.log("ImageViewer, list=" + list);
@@ -44,7 +44,7 @@ function ImageViewer({url,name,list,onContinue,onDelete,onExit}){
     setRemoteUrl(getViewEndPoint(url,item));  
   };
   const handleBack = async (event) => {
-    onExit();
+    onExit(parent);
   };
   const handleScaleUp = async (event) => {
     document.getElementById("img_container").width = document.getElementById("img_container").width + 100;
