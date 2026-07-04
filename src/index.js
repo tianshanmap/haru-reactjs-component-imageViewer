@@ -1,16 +1,10 @@
 import { useState } from "react";
 import styles from "./image_viewer.module.css"
 
-function getViewEndPoint(url,name) {
-    return url + "/view?name=" + name;
-}
-function ImageViewer({url,name,parent,list,onContinue,onDelete,onExit}){
-  console.log("ImageViewer, url=" + url);
-  console.log("ImageViewer, name=" + name);
-  console.log("ImageViewer, list=" + list);
+function ImageViewer({url,name,parent,list,onContinue,onDelete,onExit,getViewEndPoint}){
 
   const [currentImage, setCurrentImage] = useState(name);
-  const [remoteUrl,setRemoteUrl] = useState(getViewEndPoint(url,name));
+  const [remoteUrl,setRemoteUrl] = useState(getViewEndPoint(name));
   const [imageList,setImageList] = useState(list);
 
   const nextItem = (list, currentItem,pos) => {
@@ -36,12 +30,12 @@ function ImageViewer({url,name,parent,list,onContinue,onDelete,onExit}){
   const handlePrev = async (event) => {
     let item = nextItem(imageList,currentImage,-1);
     setCurrentImage(item);
-    setRemoteUrl(getViewEndPoint(url,item));    
+    setRemoteUrl(getViewEndPoint(item));    
   };
   const handleNext = async (event) => {
     let item = nextItem(imageList,currentImage,1);
     setCurrentImage(item);
-    setRemoteUrl(getViewEndPoint(url,item));  
+    setRemoteUrl(getViewEndPoint(item));  
   };
   const handleBack = async (event) => {
     onExit(parent);
