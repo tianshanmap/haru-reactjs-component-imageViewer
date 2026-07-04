@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
-import ImageViewer from './index.js'
+import ImageViewer from './index.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const url = "http://tianshan.ca/filesystem";
