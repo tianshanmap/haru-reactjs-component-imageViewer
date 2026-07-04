@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./image_viewer.module.css"
 
 function ImageViewer({name,parent,list,onContinue,onDelete,onExit,getViewEndPoint}){
+  console.log("----ImageViewer------");
 
   const [currentImage, setCurrentImage] = useState(name);
   const [remoteUrl,setRemoteUrl] = useState(getViewEndPoint(name));
@@ -92,7 +93,7 @@ function ImageViewer({name,parent,list,onContinue,onDelete,onExit,getViewEndPoin
 }
 
 function ImageViewerOne({name,parent,list,onContinue,onDelete,onExit,getViewEndPoint}){
-
+  console.log("----ImageViewerOne------");
   const [currentImage, setCurrentImage] = useState(name);
   const [remoteUrl,setRemoteUrl] = useState(getViewEndPoint(name));
   const [imageList,setImageList] = useState(list);
