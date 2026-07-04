@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
-import ImageViewer from './components/image_viewer.jsx'
+import ImageViewer from './index.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const url = "http://tianshan.ca/filesystem";
@@ -15,15 +15,18 @@ const list = [
 const onDelete = () => {
   console.log("onDelete-started");
 }
+const getViewEndPoint = (name) => {
+  return "http://tianshan.ca/filesystem/view?name=" + name;
+}
 const ImageContainer = () => {
   return (
     <div className='container'>
         <Header/>
         <ImageViewer
-          url={url}
           name={name} 
           list={list} 
           onDelete={onDelete}
+          getViewEndPoint={getViewEndPoint}
         />
         <Footer/>
     </div>
