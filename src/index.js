@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./image_viewer.module.css"
-import { ImageButton } from "./components/button";
 
 export function ImageViewer({name,parent,list,onContinue,onDelete,onExit,getViewEndPoint}){
   console.log("----ImageViewer------");
@@ -65,7 +64,6 @@ export function ImageViewer({name,parent,list,onContinue,onDelete,onExit,getView
     return (
       <div className={styles.image_block_container}>
         <div className={styles.div_image_cmd_container}>
-            <ImageButton name={name}/>
             <button className={styles.action_btn} onClick={handlePrev}>Prev</button>
             <button className={styles.action_btn} onClick={handleNext}>Next</button>
             <button className={styles.action_btn} onClick={handleScaleUp}>+</button>
