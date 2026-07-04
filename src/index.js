@@ -71,7 +71,7 @@ export function ImageViewer({name,parent,list,onContinue,onDelete,onExit,getView
             <button className={styles.action_btn} onClick={handleBack}>Back</button>
             <button className={styles.action_btn} onClick={handleDelete}>Trash</button>
         </div>
-        <img id="img_container" src={remoteUrl} width="400"></img>
+        <img id="img_container" className={styles.image} src={remoteUrl} width="500"></img>
       </div>
     );
    } else {
@@ -86,7 +86,7 @@ export function ImageViewer({name,parent,list,onContinue,onDelete,onExit,getView
             <button className={styles.action_btn} onClick={handleBack}>Back</button>
             <button className={styles.action_btn} onClick={handleDelete}>Trash</button>
         </div>
-        <img id="img_container" src={remoteUrl} width="400"></img>
+        <img id="img_container" className={styles.image} src={remoteUrl} width="500"></img>
       </div>
     );
   }

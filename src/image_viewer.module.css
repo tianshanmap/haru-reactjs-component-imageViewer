@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  box-shadow: 50px 50px 70px rgba(12, 0, 0, 0.9);
+  /* box-shadow: 50px 50px 70px rgba(12, 0, 0, 0.9); */
   gap:10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .div_image_cmd_container {
   display:flex;
@@ -24,4 +24,9 @@
 .action_btn:hover {
   background-color: #0056b3;
   transform: translateY(-2px); /* Lifts the button up slightly */
+}
+.image {
+  background-color: white;
+  box-shadow: 50px 50px 70px rgba(12, 0, 0, 0.9);
+  border-radius: 20px;
 }
