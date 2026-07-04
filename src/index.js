@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./image_viewer.module.css"
 
-function ImageViewer({url,name,parent,list,onContinue,onDelete,onExit,getViewEndPoint}){
+function ImageViewer({name,parent,list,onContinue,onDelete,onExit,getViewEndPoint}){
 
   const [currentImage, setCurrentImage] = useState(name);
   const [remoteUrl,setRemoteUrl] = useState(getViewEndPoint(name));
