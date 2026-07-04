@@ -6,6 +6,7 @@
   background-color: white;
   box-shadow: 50px 50px 70px rgba(12, 0, 0, 0.9);
   gap:10px;
+  margin-bottom: 20px;
 }
 .div_image_cmd_container {
   display:flex;
