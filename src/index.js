@@ -181,4 +181,4 @@ function ImageViewerOne({name,parent,list,onContinue,onDelete,onExit,getViewEndP
   }
 }
 
-export default {ImageViewer,ImageViewerOne};
+export default ImageViewer;
